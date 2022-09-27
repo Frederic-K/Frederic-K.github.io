@@ -1,0 +1,13 @@
+.location {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    box-shadow: inset 0px 3px 3px 0px rgb(194, 194, 194);
+
+    &__search {
+        display: flex;
+        gap: 20px;
+    }
+}
