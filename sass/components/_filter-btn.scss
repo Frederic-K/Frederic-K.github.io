@@ -33,11 +33,21 @@
 
 .selection {
     &__filter {
+        position: relative;
         display: flex;
         align-items: center;
-
+        &--number {
+            position: absolute;
+            left: -10px;
+            @include filter-number;
+        }
+        & .fa-mobile-screen-button {
+            position: absolute;
+            left: 35px;
+            color: grey;
+            font-size: large;
+        }
         &--btn {
-
             & .filter__btn {
                 @include btn-filter;
             }
