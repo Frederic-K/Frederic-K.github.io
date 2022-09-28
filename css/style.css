@@ -75,6 +75,49 @@ h2 {
   transition: opacity 300ms;
 }
 
+/*.filter__btn {
+    @include btn-filter;
+}*/
+/*.selection {
+
+    &__filter--btn {
+        @include btn-filter;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+
+            & .filter__btn {
+                opacity: 1;
+            }
+        }
+    }
+    &__filter--btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($color: $colour-primary, $amount: 5);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms;
+
+    }
+}*/
+.selection__filter {
+  display: flex;
+  align-items: center;
+}
+.selection__filter--btn .filter__btn {
+  width: 330px;
+  height: 55px;
+  border-radius: 15px;
+  border: 0px;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  background-color: #eeeeee;
+}
+
 .location {
   height: 50px;
   display: flex;
@@ -109,10 +152,15 @@ h2 {
   padding-left: 20px;
 }
 
+.selection {
+  display: flex;
+  flex-direction: column;
+}
 .selection h2 {
+  width: 100%;
   padding-left: 20px;
 }
-.selection__filter {
+.selection__button {
   width: 320px;
   display: flex;
   flex-direction: column;

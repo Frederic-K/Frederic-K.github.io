@@ -1,6 +1,46 @@
-.selection {
 
+/*.filter__btn {
+    @include btn-filter;
+}*/
+
+/*.selection {
+
+    &__filter--btn {
+        @include btn-filter;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+
+            & .filter__btn {
+                opacity: 1;
+            }
+        }
+    }
+    &__filter--btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($color: $colour-primary, $amount: 5);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms;
+
+    }
+}*/
+
+.selection {
     &__filter {
-        color: white;
+        display: flex;
+        align-items: center;
+
+        &--btn {
+
+            & .filter__btn {
+                @include btn-filter;
+            }
+        }
     }
 }
