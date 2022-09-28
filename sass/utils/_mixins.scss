@@ -30,3 +30,11 @@
     color: white;
 }
 
+@mixin filter-icon {
+    position: absolute;
+    left: 40px;
+    color: grey;
+    font-size: large;
+    font-weight: bold;
+}
+
