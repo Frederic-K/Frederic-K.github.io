@@ -16,6 +16,10 @@ h2 {
   font-size: 25px;
 }
 
+h3 {
+  font-size: 15px;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -105,12 +109,51 @@ h2 {
 
     }
 }*/
-.selection__filter {
+/*.filter__btn
+    position: relative;
+    display: flex;
+    align-items: center;
+    &--btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &--number {
+            position: absolute;
+            left: -10px;
+            @include filter-number;
+        }
+        & .fa-mobile-screen-button {
+            position: absolute;
+            left: 40px;
+            color: grey;
+            font-size: large;
+        }
+        & .filter__btn {
+            @include btn-filter;
+            transition: 300ms;
+            &:hover {
+                & .fa-mobile-screen-button {
+                    color: $colour-primary;
+                }
+                background-color: lighten($color: $colour-primary, $amount: 35);
+            }
+        }
+    } */
+.filter__btn {
   position: relative;
   display: flex;
   align-items: center;
+  width: 330px;
+  height: 55px;
+  border-radius: 15px;
+  border: 0px;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  background-color: #eeeeee;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
 }
-.selection__filter--number {
+.filter__btn--number {
   position: absolute;
   left: -10px;
   width: 20px;
@@ -122,13 +165,17 @@ h2 {
   background-color: #9356DC;
   color: white;
 }
-.selection__filter .fa-mobile-screen-button {
+.filter__btn--icon {
   position: absolute;
-  left: 35px;
+  left: 40px;
   color: grey;
   font-size: large;
+  font-weight: bold;
 }
-.selection__filter--btn .filter__btn {
+.filter__btn:hover::after {
+  opacity: 1;
+}
+.filter__btn::after {
   width: 330px;
   height: 55px;
   border-radius: 15px;
@@ -137,6 +184,16 @@ h2 {
   background-color: #eeeeee;
   font-weight: bold;
   cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f2eafb;
+  opacity: 0;
+  transition: opacity 300ms;
+  z-index: -1;
 }
 
 .location {
@@ -179,7 +236,7 @@ h2 {
 .selection {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .selection h2 {
   width: 100%;
