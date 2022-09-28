@@ -31,7 +31,13 @@ h2 {
   height: 34px;
 }
 
-.discover__btn {
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.explore__btn {
   width: 210px;
   height: 40px;
   border-radius: 20px;
@@ -40,10 +46,33 @@ h2 {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
-.discover__btn:hover {
-  box-shadow: 0px 0px 5px 2px #99E2D0;
-  background: #ff93e1;
+.explore__btn:hover::after {
+  opacity: 1;
+}
+.explore__btn::after {
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms;
 }
 
 .location {
