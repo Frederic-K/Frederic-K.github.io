@@ -9,6 +9,7 @@
     &__search {
         display: flex;
         gap: 20px;
+        font-weight: bold;
     }
 }
 
@@ -32,4 +33,17 @@
             padding-left: 20px;
         }
     }
+}
+
+.selection {
+
+        & h2 {
+            padding-left: 20px;
+        }
+
+        &__filter {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
 }
