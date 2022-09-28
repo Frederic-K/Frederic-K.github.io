@@ -1,4 +1,4 @@
-@mixin btn {
+@mixin btn-explore {
     height: 40px;
     border-radius: $border-rad;
     border: 0px;
@@ -6,5 +6,35 @@
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     box-shadow: 0px 3px 5px 2px #D7D7D9;
     cursor: pointer;
+}
+
+@mixin btn-filter {
+    width: 330px;
+    height: 55px;
+    border-radius: 15px;
+    border: 0px;
+    box-shadow: 0px 3px 5px 2px #D7D7D9;
+    background-color: #eeeeee;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@mixin filter-number {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-rad;
+    background-color: $colour-primary;
+    color: white;
+}
+
+@mixin filter-icon {
+    position: absolute;
+    left: 40px;
+    color: grey;
+    font-size: large;
+    font-weight: bold;
 }
 
