@@ -1,4 +1,20 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/ /*@keyframes heart_fill {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
 * {
   box-sizing: border-box;
 }
@@ -93,18 +109,6 @@ h3 {
   cursor: pointer;
   z-index: 1;
 }
-.filter__btn--number {
-  position: absolute;
-  left: -10px;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #9356DC;
-  color: white;
-}
 .filter__btn::after {
   width: 330px;
   height: 55px;
@@ -125,8 +129,24 @@ h3 {
   transition: opacity 300ms;
   z-index: -1;
 }
+.filter__btn:hover .filter__btn--icon {
+  color: #9356DC;
+  transition: color 300ms;
+}
 .filter__btn:hover::after {
   opacity: 1;
+}
+.filter__btn--number {
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: white;
 }
 .filter__btn--icon {
   position: absolute;
@@ -136,6 +156,24 @@ h3 {
   font-weight: bold;
 }
 
+.card__btn {
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  border: 0px;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/*.fa-heart {
+    color: red;
+    &:hover{
+        color: green;
+        animation: heart_fill 250ms ease-in-out 1s both;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    }
+}*/
 .location {
   height: 50px;
   display: flex;
@@ -203,8 +241,29 @@ h3 {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0px 5px 5px #D7D7D9;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
   background-color: white;
+  z-index: 1;
+}
+.card:hover .card__caption {
+  color: #9356DC;
+  transition: color 300ms;
+}
+.card:hover::after {
+  opacity: 1;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  background-color: #f2eafb;
+  opacity: 0;
+  transition: opacity 300ms;
+  z-index: -1;
 }
 .card__sticker {
   width: 80px;
@@ -239,10 +298,6 @@ h3 {
   padding-top: 15px;
   padding-left: 10px;
   position: relative;
-  /*&--btn {
-      border: 0px;
-      cursor: pointer;
-  }*/
 }
 .card__caption--title {
   padding-bottom: 5px;
@@ -250,13 +305,17 @@ h3 {
 .card__caption--location {
   padding-bottom: 10px;
 }
-.card__caption--icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 25px;
-}
 
+/*&--icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+}*
+/*&--btn {
+    border: 0px;
+    cursor: pointer;
+}*/
 .header__menu {
   position: relative;
 }
