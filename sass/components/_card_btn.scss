@@ -1,0 +1,21 @@
+.card {
+    &__btn {
+        position: absolute;
+        right: 15px;
+        bottom: 30px;
+        border: 0px;
+        background-color: transparent;
+        font-size: 25px;
+        cursor: pointer;
+    }    
+}
+
+
+/*.fa-heart {
+    color: red;
+    &:hover{
+        color: green;
+        animation: heart_fill 250ms ease-in-out 1s both;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    }
+}*/
