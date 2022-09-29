@@ -1,98 +1,39 @@
-
-/*.filter__btn {
-    @include btn-filter;
-}*/
-
-/*.selection {
-
-    &__filter--btn {
-        @include btn-filter;
-        position: relative;
-        z-index: 1;
-
-        &:hover {
-
-            & .filter__btn {
-                opacity: 1;
-            }
-        }
-    }
-    &__filter--btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: lighten($color: $colour-primary, $amount: 5);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 300ms;
-
-    }
-}*/
-
-/*.filter__btn
-    position: relative;
-    display: flex;
-    align-items: center;
-    &--btn {
+.filter {
+    &__btn{
         position: relative;
         display: flex;
         align-items: center;
+        @include btn-filter;
+        z-index: 1;
+        &::after {
+            @include btn-filter;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: lighten($color: $colour-primary, $amount: 35);
+            opacity: 0;
+            transition: opacity 300ms;
+            z-index: -1;
+        }
+        &:hover {
+            .filter__btn--icon {
+                color: $colour-primary;
+                transition: color 300ms;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
         &--number {
             position: absolute;
             left: -10px;
             @include filter-number;
-        }
-        & .fa-mobile-screen-button {
-            position: absolute;
-            left: 40px;
-            color: grey;
-            font-size: large;
-        }
-        & .filter__btn {
-            @include btn-filter;
-            transition: 300ms;
-            &:hover {
-                & .fa-mobile-screen-button {
-                    color: $colour-primary;
-                }
-                background-color: lighten($color: $colour-primary, $amount: 35);
-            }
-        }
-    } */  
-    .filter {
-        &__btn{
-            position: relative;
-            display: flex;
-            align-items: center;
-            @include btn-filter;
-            z-index: 1;
-            &--number {
-                position: absolute;
-                left: -10px;
-                @include filter-number;
-            }
-            &--icon {
-                @include filter-icon;
-            }
-            &:hover {
-                &::after {
-                    opacity: 1;
-                }
-            }    
-            &::after {
-                @include btn-filter;
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: lighten($color: $colour-primary, $amount: 35);
-                opacity: 0;
-                transition: opacity 300ms;
-                z-index: -1;
-            }
+        }    
+        &--icon {
+            @include filter-icon;
         }
     }
+}
