@@ -165,15 +165,45 @@ h3 {
   font-size: 25px;
   cursor: pointer;
 }
+.card__btn .btn__icon {
+  position: relative;
+}
+.card__btn .btn__icon .empty-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+}
+.card__btn .btn__icon .full-heart {
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  opacity: 0;
+}
+.card__btn .btn__icon:hover .empty-heart {
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+  opacity: 0;
+}
+.card__btn .btn__icon:hover .full-heart {
+  /*position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+  opacity: 1;
+}
 
-/*.fa-heart {
-    color: red;
-    &:hover{
-        color: green;
-        animation: heart_fill 250ms ease-in-out 1s both;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-    }
-}*/
 .location {
   height: 50px;
   display: flex;

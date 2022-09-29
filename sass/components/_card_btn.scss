@@ -7,15 +7,46 @@
         background-color: transparent;
         font-size: 25px;
         cursor: pointer;
+        .btn__icon {
+            position: relative;
+            .empty-heart {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 1;
+            }
+            .full-heart {
+                /*position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;*/
+                color: transparent;
+                background-clip: text;
+                background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
+                opacity: 0;
+            }
+            &:hover {
+                .empty-heart {
+                    /*position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;*/
+                    opacity: 0;
+                }
+                .full-heart {
+                    /*position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;*/
+                    //transition: opacity 300ms;
+                    opacity: 1;
+                }
+            }
+        }
     }    
 }
-
-
-/*.fa-heart {
-    color: red;
-    &:hover{
-        color: green;
-        animation: heart_fill 250ms ease-in-out 1s both;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-    }
-}*/
