@@ -2,9 +2,51 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 25px;
     padding-left: 25px;
-    background-color: red;
-}
-.footer__title {
-    font-family: 'Shrikhand', cursive;
+    font-size: 18px;
+    //font-weight: 100;
+    color: white;
+    background-color: grey;
+    &__title {
+        font-size: 10px;
+        margin: 0px;
+    }
+    &__submit {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 0px;
+        & i {
+            margin: 0px;
+        }
+        & h5 {margin: 0px;
+        }
+    }
+    &__partnership {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 0px;
+        & i {
+            margin: 0px;
+        }
+        & h5 {margin: 0px;
+        }
+    }
+    &__legalnotice {
+        margin: 0px;
+    }
+    &__contact {
+        margin: 0px;
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+        & a:hover {
+            color: $colour-secondary;
+        }
+    }
 }
