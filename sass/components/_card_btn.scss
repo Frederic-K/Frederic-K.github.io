@@ -1,49 +1,29 @@
 .card {
     &__btn {
         position: absolute;
-        right: 15px;
-        bottom: 30px;
+        right: 40px;
+        bottom: 55px;
         border: 0px;
-        background-color: transparent;
         font-size: 25px;
         cursor: pointer;
         .btn__icon {
             position: relative;
             .empty-heart {
                 position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
                 opacity: 1;
             }
             .full-heart {
-                /*position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;*/
+                position: absolute;         
                 color: transparent;
                 background-clip: text;
                 background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
                 opacity: 0;
-            }
+            }    
             &:hover {
                 .empty-heart {
-                    /*position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;*/
                     opacity: 0;
                 }
                 .full-heart {
-                    /*position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;*/
-                    //transition: opacity 300ms;
                     opacity: 1;
                 }
             }
