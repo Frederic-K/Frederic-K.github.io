@@ -198,10 +198,11 @@ h3 {
   opacity: 0;
 }
 .card__btn .btn__icon:hover .empty-heart {
-  animation: heart_drain 250s 0s ease-in-out both;
+  transition: opacity 1s;
+  opacity: 0;
 }
 .card__btn .btn__icon:hover .full-heart {
-  animation: heart_fill 250ms 0s ease-in-out both;
+  transition: opacity 1s;
   opacity: 1;
 }
 
