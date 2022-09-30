@@ -1,0 +1,17 @@
+.card {
+    position: relative;
+    &__sticker {
+        width: 80px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        color: darken($color: $colour-tertiary, $amount: 20);
+        background-color: lighten($color: $colour-tertiary, $amount: 10);
+    }
+}

@@ -45,7 +45,6 @@
             padding-top: 40px;
             padding-left: 20px;
         }
-
 }
 
 .restaurant {
@@ -91,20 +90,6 @@
         opacity: 0;
         transition: opacity 300ms;
         z-index: -1;
-    }
-    &__sticker {
-        width: 80px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        color: darken($color: $colour-tertiary, $amount: 20);
-        background-color: lighten($color: $colour-tertiary, $amount: 10);
     }
     & a {
         text-decoration: none;
