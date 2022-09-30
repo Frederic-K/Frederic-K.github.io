@@ -14,9 +14,10 @@
             }
             .full-heart {
                 position: absolute;         
-                color: transparent;
+                /*color: transparent;
                 background-clip: text;
-                background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
+                background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);*/
+                color: $colour-primary;
                 opacity: 0;
             }    
             &:hover {
