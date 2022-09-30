@@ -45,7 +45,15 @@
             padding-top: 40px;
             padding-left: 20px;
         }
-}
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        & h2 {
+            padding-top: 20px;
+        }
+    }    
+}    
 
 .restaurant {
     max-height: 1280px;
@@ -55,11 +63,16 @@
     padding-top: 40px;
     padding-bottom: 50px;
     background-color: lighten($color: #eeeeee, $amount: 4);
-    & h2 {
-        width: 100%;
-        padding-left: 20px;
+        & h2 {
+            width: 100%;
+            padding-left: 20px;
+        }
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
-}
+}    
 
 .card {
     width: 340px;
