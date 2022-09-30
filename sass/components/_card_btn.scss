@@ -21,9 +21,11 @@
             }    
             &:hover {
                 .empty-heart {
-                    opacity: 0;
+                    //opacity: 0;
+                    animation: heart_drain 250s 0s ease-in-out both;
                 }
                 .full-heart {
+                    animation: heart_fill 250ms 0s ease-in-out both;
                     opacity: 1;
                 }
             }

@@ -16,6 +16,23 @@
     opacity: 1;
   }
 }
+@keyframes heart_drain {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -180,9 +197,10 @@ h3 {
   opacity: 0;
 }
 .card__btn .btn__icon:hover .empty-heart {
-  opacity: 0;
+  animation: heart_drain 250s 0s ease-in-out both;
 }
 .card__btn .btn__icon:hover .full-heart {
+  animation: heart_fill 250ms 0s ease-in-out both;
   opacity: 1;
 }
 
