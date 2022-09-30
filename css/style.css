@@ -33,6 +33,50 @@
     opacity: 0;
   }
 }
+@keyframes heart_fill-scale {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+    /*opacity: 1;*/
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  /*85% {
+      opacity: 1;
+  }*/
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*@keyframes heart_drain-scale {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(0.75);
+        opacity: 0.75;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.50;
+    }
+    75% {
+        transform: scale(0.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    } 
+}*/
 * {
   box-sizing: border-box;
 }
@@ -198,12 +242,13 @@ h3 {
   opacity: 0;
 }
 .card__btn .btn__icon:hover .empty-heart {
-  transition: opacity 1s;
+  transition: opacity 500ms;
   opacity: 0;
 }
 .card__btn .btn__icon:hover .full-heart {
-  transition: opacity 1s;
-  opacity: 1;
+  animation: heart_fill-scale;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
 }
 
 .location {
