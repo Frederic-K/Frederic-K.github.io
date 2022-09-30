@@ -236,6 +236,12 @@ h3 {
   color: #4acbab;
   background-color: #c1ede2;
 }
+.card__sticker--on {
+  opacity: 1;
+}
+.card__sticker--off {
+  opacity: 0;
+}
 
 .card__btn {
   position: absolute;

@@ -13,5 +13,11 @@
         font-weight: bold;
         color: darken($color: $colour-tertiary, $amount: 20);
         background-color: lighten($color: $colour-tertiary, $amount: 10);
+        &--on {
+            opacity: 1;
+        }
+        &--off {
+            opacity: 0;
+        }
     }
 }
