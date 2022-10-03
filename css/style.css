@@ -331,6 +331,19 @@ h3 {
   animation-fill-mode: forwards;
 }
 
+.card__check {
+  width: 70px;
+  border: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  cursor: pointer;
+}
+.card__check i {
+  font-size: 20px;
+  color: white;
+}
+
 .location {
   height: 50px;
   display: flex;
@@ -461,58 +474,97 @@ h3 {
   font-size: 20px;
 }
 
-.restaurant {
+.restaurant__card {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 0px;
-  background-color: #eeeeee;
+  position: relative;
 }
-.restaurant__img {
+.restaurant__card .restaurant__img {
   width: 100%;
   overflow: hidden;
 }
-.restaurant__img img {
+.restaurant__card .restaurant__img img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-.restaurant__menu {
+.restaurant__card .restaurant__menu {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #eeeeee;
 }
-.restaurant__name {
+.restaurant__card .restaurant__name {
   width: 100%;
   position: relative;
   padding-left: 20px;
 }
-.restaurant__name .card__btn {
+.restaurant__card .restaurant__name .card__btn {
   position: absolute;
   right: 60px;
 }
-.restaurant .menu__starter {
+.restaurant__card .menu__starter {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
-.restaurant .menu__starter .starter__title {
+.restaurant__card .menu__starter .starter__title {
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.restaurant .menu__starter .starter__title h3 {
+.restaurant__card .menu__starter .starter__title h3 {
   width: 100%;
   padding-left: 20px;
 }
-.restaurant .menu__starter .starter__title .starter__underline {
+.restaurant__card .menu__starter .starter__title .starter__underline {
   position: absolute;
   top: 20px;
   left: 20px;
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
+}
+.restaurant__card .menu__starter .starter__card {
+  width: 350px;
+  height: 75px;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  background-color: white;
+}
+.restaurant__card .menu__starter .starter__card .starter__meal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 5px;
+}
+.restaurant__card .menu__starter .starter__card .starter__meal .meal__title {
+  width: 100%;
+  display: flex;
+}
+.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  text-overflow: ellipsis;
+}
+.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle .meal__side {
+  width: 100%;
+  text-align: left;
+}
+.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle .meal__price {
+  width: 30px;
+  text-align: right;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

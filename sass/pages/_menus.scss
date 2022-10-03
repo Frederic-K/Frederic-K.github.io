@@ -9,13 +9,12 @@
         font-size: 20px;
     }
 }
-.restaurant {
+.restaurant__card {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 0px;
-    background-color: #eeeeee;
-    &__img {
+    position: relative;
+    .restaurant__img {
         width: 100%;
         overflow: hidden;
         img {
@@ -24,13 +23,17 @@
             object-fit: cover;
         }
     }
-    &__menu {
+    .restaurant__menu {
         width: 100%;
         display: flex;
         flex-direction: column;
-        //margin: 0px;
+        position: absolute;
+        top: 200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #eeeeee;
     }
-    &__name {
+    .restaurant__name {
         width: 100%;
         position: relative;
         //margin: 0px;
@@ -44,23 +47,60 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 15px;
         .starter__title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            h3 {
                 width: 100%;
+                padding-left: 20px;
+            }
+            .starter__underline {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 40px;
+                height: 3px;
+                background-color: $colour-tertiary;
+            }
+        }
+        .starter__card {
+            width: 350px;
+            height: 75px;
+            display: flex;
+            border-radius: $border-rad;
+            @include shadow-heavy;
+            background-color: white;
+            .starter__meal {
+                width: 100%;
+                //height: 72px;
                 display: flex;
                 flex-direction: column;
-                position: relative;
-                h3 {
+                padding: 15px;
+                gap: 5px;
+                .meal__title {
                     width: 100%;
-                    padding-left: 20px;
+                    display: flex;
                 }
-                .starter__underline {
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
-                    width: 40px;
-                    height: 3px;
-                    background-color: $colour-tertiary;
+                .meal__subtitle {
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    text-overflow: ellipsis;
+                    .meal__side {
+                        width: 100%;
+                        text-align: left;
+                    }
+                    .meal__price {
+                        width: 30px;
+                        text-align: right;
+                        font-weight: bold;
+                    }
                 }
+            }
         }
-    }    
+        
+    }
 }

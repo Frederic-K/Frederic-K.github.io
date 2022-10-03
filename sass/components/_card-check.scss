@@ -1,0 +1,13 @@
+.card__check {
+    width: 70px;
+    border: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $colour-tertiary;
+    cursor: pointer;
+    i {
+        font-size: 20px;
+        color: white;
+    }
+    
+}

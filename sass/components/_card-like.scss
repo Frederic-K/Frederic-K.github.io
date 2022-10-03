@@ -9,11 +9,13 @@
         .btn__icon {
             position: relative;
             .empty-heart {
+                //border: 0px;
                 position: absolute;
                 opacity: 1;
             }
             .full-heart {
-                position: absolute;         
+                position: absolute;
+                //border: 0px;        
                 /*color: transparent;
                 background-clip: text;
                 background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);*/
@@ -24,12 +26,14 @@
                 .empty-heart {
                     transition: opacity 500ms;
                     opacity: 0;
-                    //animation: heart_drain 250s 0s ease-in-out both;
+                    //border: 0px;
+                    //animation: heart_drain 250s 0s ease-in-out forward;
                 }
                 .full-heart {
                     //transition: opacity 1s;
                     //opacity: 1;
-                    //animation: heart_fill 250ms 0s ease-in-out both;
+                    //animation: heart_fill 250ms 0s ease-in-out forward;
+                    //border: 0px;
                     animation: heart_fill-scale;
                     animation-duration: 300ms;
                     animation-fill-mode: forwards;
