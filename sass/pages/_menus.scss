@@ -9,4 +9,58 @@
         font-size: 20px;
     }
 }
-
+.restaurant {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    background-color: #eeeeee;
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+    &__menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        //margin: 0px;
+    }
+    &__name {
+        width: 100%;
+        position: relative;
+        //margin: 0px;
+        padding-left: 20px;
+        .card__btn {
+            position: absolute;
+            right: 60px;
+        }
+    }
+    .menu__starter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .starter__title {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                h3 {
+                    width: 100%;
+                    padding-left: 20px;
+                }
+                .starter__underline {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    width: 40px;
+                    height: 3px;
+                    background-color: $colour-tertiary;
+                }
+        }
+    }    
+}
