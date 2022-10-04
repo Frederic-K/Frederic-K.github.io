@@ -1,4 +1,4 @@
-@keyframes heart_fill {
+/*@keyframes heart_fill {
     0% {
         opacity: 0;
     }
@@ -14,9 +14,9 @@
     100% {
         opacity: 1;
     }
-}
+}*/
 
-@keyframes heart_drain {
+/*@keyframes heart_drain {
     0% {
         opacity: 1;
     }
@@ -32,8 +32,8 @@
     100% {
         opacity: 0;
     } 
-}
-@keyframes heart_fill-scale {
+}*/
+@keyframes heart_fill {
     0% {
         transform: scale(0);
         transform-origin: 50% 100%;
@@ -56,6 +56,26 @@
         opacity: 1;
     }
 }
+@keyframes card-check {
+    0% {
+        transform: scaleX(0);
+        transform-origin: 100% 100%;
+    }
+    25% {
+        transform: scaleX(0.25);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    75% {
+        transform: scaleX(0.75);
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+}  
 
 /*@keyframes heart_drain-scale {
     0% {
