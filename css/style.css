@@ -363,6 +363,15 @@ h3 {
   transform-origin: bottom;
 }
 
+.starter__card--btn:hover {
+  background-color: #f2eafb;
+}
+.starter__card--btn:hover .card__check {
+  /*transform: scaleX(1);
+  transform-origin: right;*/
+  animation: card-check 1s 0s ease-in-out forwards;
+}
+
 .card__check {
   width: 80px;
   height: 100%;
