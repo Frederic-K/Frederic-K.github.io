@@ -5,9 +5,8 @@
     border-bottom-right-radius: 20px;
     background-color: $colour-tertiary;
     cursor: pointer;
-    i {
-        font-size: 20px;
-        color: white;
-    }
-    
+    opacity: 0;
+   &:hover {
+    animation: card-check 500ms 0ms ease-in-out forwards;
+   } 
 }

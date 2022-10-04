@@ -12,6 +12,7 @@
                 //border: 0px;
                 position: absolute;
                 opacity: 1;
+                transition: opacity 500ms;
             }
             .full-heart {
                 position: absolute;
@@ -21,10 +22,11 @@
                 background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);*/
                 color: $colour-primary;
                 opacity: 0;
+                transition: all;
             }    
             &:hover {
                 .empty-heart {
-                    transition: opacity 500ms;
+                    
                     opacity: 0;
                     //border: 0px;
                     //animation: heart_drain 250s 0s ease-in-out forward;
@@ -34,9 +36,11 @@
                     //opacity: 1;
                     //animation: heart_fill 250ms 0s ease-in-out forward;
                     //border: 0px;
-                    animation: heart_fill-scale;
+                    /*animation: heart_fill;
                     animation-duration: 300ms;
-                    animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;*/
+                    opacity: 1;
+                    transform-origin: bottom;
                     }
             }
         }
