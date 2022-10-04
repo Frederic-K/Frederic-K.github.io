@@ -56,24 +56,33 @@
   }
 }
 @keyframes card-check {
-  0% {
+  from {
     transform: scaleX(0);
-    transform-origin: 100% 100%;
+    transform: width(0px);
+    transform-origin: right;
   }
-  25% {
-    transform: scaleX(0.25);
-  }
-  50% {
-    transform: scaleX(0.5);
-  }
-  75% {
-    transform: scaleX(0.75);
-  }
-  100% {
+  to {
     transform: scaleX(1);
-    opacity: 1;
   }
 }
+/*@keyframes card-check {
+    0% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    25% {
+        transform: scaleX(0.25);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    75% {
+        transform: scaleX(0.75);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}*/
 /*@keyframes heart_drain-scale {
     0% {
         transform: scale(1);
@@ -199,13 +208,12 @@ h3 {
   border-radius: 20px;
   border: 0px;
   color: white;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   position: relative;
   z-index: 1;
-  cursor: pointer;
 }
 .explore__btn:hover::after {
   opacity: 1;
@@ -215,7 +223,7 @@ h3 {
   border-radius: 20px;
   border: 0px;
   color: white;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
   content: "";
@@ -224,7 +232,7 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
   box-shadow: 0px 3px 5px 2px #c1c1c1;
   opacity: 0;
   z-index: -1;
@@ -353,16 +361,42 @@ h3 {
 }
 
 .card__check {
-  width: 70px;
-  border: 0px;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  cursor: pointer;
-  opacity: 0;
+  transform: scaleX(0);
 }
-.card__check:hover {
-  animation: card-check 500ms 0ms ease-in-out forwards;
+
+.order {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: white;
+}
+.order__btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  transition: background-image 1s;
+}
+.order__btn:hover {
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
 }
 
 .location {
@@ -499,7 +533,6 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .restaurant__card .restaurant__img {
   width: 100%;
@@ -514,8 +547,8 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 200px;
+  padding-bottom: 50px;
+  margin-top: -20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #eeeeee;
@@ -560,31 +593,48 @@ h3 {
   border-radius: 20px;
   box-shadow: 0px 3px 5px 2px #c1c1c1;
   background-color: white;
+  overflow: hidden;
 }
-.restaurant__card .menu__starter .starter__card .starter__meal {
+.restaurant__card .menu__starter .starter__card--btn {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex;
+  border: transparent;
+  cursor: pointer;
+}
+.restaurant__card .menu__starter .starter__card--btn .starter__meal {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 15px;
   gap: 5px;
 }
-.restaurant__card .menu__starter .starter__card .starter__meal .meal__title {
+.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__title {
   width: 100%;
   display: flex;
 }
-.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle {
+.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle {
   width: 100%;
   height: 30px;
   display: flex;
 }
-.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle .meal__side {
+.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle .meal__side {
   width: 100%;
   text-align: left;
 }
-.restaurant__card .menu__starter .starter__card .starter__meal .meal__subtitle .meal__price {
+.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle .meal__price {
   width: 30px;
   text-align: right;
   font-weight: bold;
+}
+.restaurant__card .menu__starter .starter__card .starter__card--btn:hover {
+  background-color: #f2eafb;
+}
+.restaurant__card .menu__starter .starter__card .starter__card--btn:hover .card__check {
+  /*transform: scaleX(1);
+  transform-origin: right;*/
+  animation: card-check 1s 0s ease-in-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
