@@ -66,6 +66,14 @@
 
     }
 }
+@keyframes test-check {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 80px;
+    }
+}
 /*@keyframes card-check {
     0% {
         transform: scaleX(0);
