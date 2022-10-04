@@ -199,13 +199,12 @@ h3 {
   border-radius: 20px;
   border: 0px;
   color: white;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   position: relative;
   z-index: 1;
-  cursor: pointer;
 }
 .explore__btn:hover::after {
   opacity: 1;
@@ -215,7 +214,7 @@ h3 {
   border-radius: 20px;
   border: 0px;
   color: white;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
   content: "";
@@ -224,7 +223,7 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
   box-shadow: 0px 3px 5px 2px #c1c1c1;
   opacity: 0;
   z-index: -1;
@@ -352,6 +351,10 @@ h3 {
   transform-origin: bottom;
 }
 
+.starter__card:hover + .card__check {
+  transform: scaleX(1.5);
+}
+
 .card__check {
   width: 70px;
   border: 0px;
@@ -360,9 +363,33 @@ h3 {
   background-color: #99E2D0;
   cursor: pointer;
   opacity: 0;
+  transform: scaleX(0.1);
+  transition: transform 1s;
 }
-.card__check:hover {
-  animation: card-check 500ms 0ms ease-in-out forwards;
+
+.order {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: white;
+}
+.order__btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  transition: background-image 1s;
+}
+.order__btn:hover {
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
 }
 
 .location {
@@ -499,7 +526,6 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .restaurant__card .restaurant__img {
   width: 100%;
@@ -514,8 +540,8 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 200px;
+  padding-bottom: 50px;
+  margin-top: -20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #eeeeee;

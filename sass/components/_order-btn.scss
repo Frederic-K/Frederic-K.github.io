@@ -1,0 +1,19 @@
+.order {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    color: white;
+    &__btn {
+        width: 180px;
+        @include btn-order;
+        @include shadow-light;
+        //cursor: pointer;
+        transition: background-image 1s;
+        &:hover {
+            @include shadow-heavy;
+            background-image: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-secondary, 10) 100%);
+        }
+    }
+}

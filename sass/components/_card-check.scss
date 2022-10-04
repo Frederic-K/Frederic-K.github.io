@@ -1,3 +1,9 @@
+.starter__card {
+    &:hover + .card__check {
+        transform: scaleX(1.5);
+    }
+}
+
 .card__check {
     width: 70px;
     border: 0px;
@@ -6,7 +12,6 @@
     background-color: $colour-tertiary;
     cursor: pointer;
     opacity: 0;
-   &:hover {
-    animation: card-check 500ms 0ms ease-in-out forwards;
-   } 
+    transform: scaleX(0.1);
+    transition: transform 1s;
 }
