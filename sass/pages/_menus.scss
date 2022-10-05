@@ -72,7 +72,7 @@
             display: flex;
             border-radius: $border-rad;
             @include shadow-heavy;
-            background-color: white;
+            //background-color: white;
             overflow: hidden;
             &--btn {
                 width: 100%;
@@ -106,14 +106,6 @@
                             font-weight: bold;
                         }
                     }
-                }
-            }
-            .starter__card--btn:hover {
-                background-color: lighten($color: $colour-primary, $amount: 35);
-                .card__check {
-                    /*transform: scaleX(1);
-                    transform-origin: right;*/
-                    animation: card-check 1s 0s ease-in-out forwards;
                 }
             }
         } 

@@ -1,5 +1,5 @@
 .card {
-    &__btn {
+    &__btn--like {
         position: absolute;
         right: 40px;
         bottom: 55px;
@@ -11,14 +11,12 @@
         .btn__icon {
             position: relative;
             .empty-heart {
-                //border: 0px;
                 position: absolute;
                 opacity: 1;
                 transition: opacity 1s;
             }
             .full-heart {
                 position: absolute;
-                //border: 0px;        
                 //color: transparent;
                 //background-clip: text;
                 //background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
@@ -30,17 +28,8 @@
             &:hover {
                 .empty-heart {                    
                     opacity: 0;
-                    //border: 0px;
-                    //animation: heart_drain 250s 0s ease-in-out forward;
                 }
                 .full-heart {
-                    //transition: opacity 1s;
-                    //opacity: 1;
-                    //animation: heart_fill 250ms 0s ease-in-out forward;
-                    //border: 0px;
-                    /*animation: heart_fill;
-                    animation-duration: 300ms;
-                    animation-fill-mode: forwards;*/
                     opacity: 1;
                     transform: scale(1);
                     transform-origin: bottom;
