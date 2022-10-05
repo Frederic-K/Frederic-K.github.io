@@ -56,22 +56,22 @@
         opacity: 1;
     }
 }
-@keyframes card-check {
-    from {
-        transform: scaleX(0);
-        transform-origin: right;
-    }
-    to {
-        transform: scaleX(1);
 
-    }
-}
-@keyframes test-check {
+@keyframes card-check {
     from {
         width: 0px;
     }
     to {
         width: 80px;
+    }
+}
+
+@keyframes card-check-spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
     }
 }
 

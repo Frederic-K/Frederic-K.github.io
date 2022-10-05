@@ -57,19 +57,18 @@
 }
 @keyframes card-check {
   from {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-@keyframes test-check {
-  from {
     width: 0px;
   }
   to {
     width: 80px;
+  }
+}
+@keyframes card-check-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 /*@keyframes card-check {
@@ -236,6 +235,7 @@ h3 {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
   content: "";
   position: absolute;
   top: 0;
@@ -243,7 +243,6 @@ h3 {
   bottom: 0;
   left: 0;
   background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
-  box-shadow: 0px 3px 5px 2px #c1c1c1;
   opacity: 0;
   z-index: -1;
   transition: opacity 300ms;
@@ -372,7 +371,10 @@ h3 {
   background-color: #f2eafb;
 }
 .starter__card--btn:hover .card__check {
-  animation: test-check 1s 0s ease-in-out forwards;
+  animation: card-check 500ms 0s ease-in-out forwards;
+}
+.starter__card--btn:hover .check__icon {
+  animation: card-check-spin 400ms 100ms ease-in-out forwards;
 }
 
 .card__check {
@@ -381,14 +383,16 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   overflow: hidden;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  /*transform: scaleX(0);
-  transition: all 500ms ease-in-out;*/
+  margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .order {
@@ -409,11 +413,31 @@ h3 {
   box-shadow: 0px 3px 5px 2px #D7D7D9;
   cursor: pointer;
   box-shadow: 0px 3px 5px 2px #D7D7D9;
-  transition: background-image 1s;
+  position: relative;
+  z-index: 1;
 }
-.order__btn:hover {
-  box-shadow: 0px 3px 5px 2px #c1c1c1;
+.order__btn:hover::after {
+  opacity: 1;
+}
+.order__btn::after {
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 2px #D7D7D9;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: radial-gradient(circle, #ff93e1 0%, #ff46cc 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms;
 }
 
 .location {
