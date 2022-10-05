@@ -121,9 +121,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*main {
-    min-width: 380px;
-}*/
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -626,6 +623,7 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
   position: relative;
 }
 .restaurant__card .menu__meal .meal__title h3 {
@@ -644,9 +642,11 @@ h3 {
 .restaurant__card .menu__meal .meal__section {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
+  padding-bottom: 20px;
+  text-overflow: ellipsis;
 }
-.restaurant__card .meal__card {
+.restaurant__card .menu__meal .meal__section .meal__card {
   width: 350px;
   height: 75px;
   display: flex;
@@ -654,7 +654,7 @@ h3 {
   box-shadow: 0px 3px 5px 2px #c1c1c1;
   overflow: hidden;
 }
-.restaurant__card .meal__card--btn {
+.restaurant__card .menu__meal .meal__section .meal__card--btn {
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -662,31 +662,39 @@ h3 {
   border: transparent;
   cursor: pointer;
 }
-.restaurant__card .meal__card--btn .meal__detail {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 15px;
   gap: 5px;
 }
-.restaurant__card .meal__card--btn .meal__detail .meal__title {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__title {
   width: 100%;
   text-align: left;
   display: flex;
 }
-.restaurant__card .meal__card--btn .meal__detail .meal__subtitle {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle {
   width: 100%;
   height: 30px;
   display: flex;
 }
-.restaurant__card .meal__card--btn .meal__detail .meal__subtitle .meal__side {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__side {
   width: 100%;
   text-align: left;
+  text-overflow: ellipsis;
 }
-.restaurant__card .meal__card--btn .meal__detail .meal__subtitle .meal__price {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__price {
   width: 30px;
   text-align: right;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__card .menu__meal .meal__section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

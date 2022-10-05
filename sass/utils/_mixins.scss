@@ -62,9 +62,9 @@
 }
 
 @mixin ellipsis {
-        margin: 0px;
-        white-space: nowrap;
+        //margin: 0px;
+        //white-space: nowrap;
         text-overflow: ellipsis;
-        overflow: hidden;    
+        //overflow: hidden;    
 }
 
