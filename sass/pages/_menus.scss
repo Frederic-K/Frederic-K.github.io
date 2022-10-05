@@ -100,6 +100,7 @@
                             width: 100%;
                             text-align: left;
                             display: flex;
+                            //@include ellipsis;
                         }
                         .meal__subtitle {
                             width: 100%;
@@ -107,8 +108,8 @@
                             display: flex;
                             .meal__side {
                                 width: 100%;
-                                text-align: left; 
-                                text-overflow: ellipsis; 
+                                text-align: left;
+                                //@include ellipsis;
                             }
                             .meal__price {
                                 width: 30px;

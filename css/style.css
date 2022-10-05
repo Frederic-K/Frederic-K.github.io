@@ -112,13 +112,10 @@
     } 
 }*/
 * {
-  box-sizing: border-box;
-}
-
-* {
   max-width: 1280px;
   margin: 0px auto;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -682,7 +679,6 @@ h3 {
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__side {
   width: 100%;
   text-align: left;
-  text-overflow: ellipsis;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__price {
   width: 30px;
