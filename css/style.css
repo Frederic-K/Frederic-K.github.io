@@ -1,37 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/ /*@keyframes heart_fill {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
-/*@keyframes heart_drain {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.75;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.25;
-    }
-    100% {
-        opacity: 0;
-    } 
-}*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/
 @keyframes heart_fill {
   0% {
     transform: scale(0);
@@ -71,6 +38,82 @@
     transform: rotate(0deg);
   }
 }
+@keyframes loader-spin-title {
+  0% {
+    transform: rotate(0deg);
+    font-size: 0px;
+    color: #9356DC;
+  }
+  70% {
+    transform: rotate(360deg);
+    color: #FF79DA;
+  }
+  80% {
+    font-size: 80px;
+    color: #99E2D0;
+  }
+  100% {
+    transform: rotate(360deg);
+    font-size: 60px;
+    color: #99E2D0;
+  }
+}
+@keyframes loader-background {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*@keyframes loader-move {
+0% {
+    transform: translateY(0);
+}
+25% {
+    transform: translateY(0.5rem);
+}
+75% {
+    transform: translateY(-0.5rem);
+}
+100% {
+    transform: translateY(0);
+}
+}*/
+/*@keyframes heart_fill {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+/*@keyframes heart_drain {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    } 
+}*/
 /*@keyframes card-check {
     0% {
         transform: scaleX(0);
@@ -118,6 +161,10 @@
   box-sizing: border-box;
 }
 
+.container {
+  position: relative;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -128,6 +175,78 @@ h2 {
 
 h3 {
   font-size: 15px;
+}
+
+h5 {
+  font-family: "Shrikhand", cursive;
+}
+
+/*.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__ustensil {
+        color: $colour-primary;
+        font-family: 'Shrikhand', cursive;
+        font-size: 550px;
+        opacity: 0.8;
+        span {
+            display: inline-block;
+            animation: loader-pulse 0.5s alternate ease-in-out infinite;
+            &:nth-child(odd) {
+                animation-delay: 0.5s;
+            }
+        }
+
+    }
+}*/
+/*main {
+  opacity: 0.2;
+  animation: loader-homepage 5500ms 1s ease-in-out forwards;
+}*/
+/*.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  animation: loader-background 6s 0s ease-in-out;
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0px;
+    margin-top: 300px;
+    animation: loader-title 5s 100ms ease-in-out;
+  }
+}*/
+.loader {
+  width: 100%;
+  height: 100%;
+}
+.loader__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 350px;
+  /*top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+  font-size: 0px;
+  animation: loader-spin-title 5s 1s;
+  z-index: 10;
+}
+.loader__background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #e8f9f5;
+  animation: loader-background 7s 0s both;
+  z-index: 9;
 }
 
 .header {
@@ -197,12 +316,6 @@ h3 {
 }
 .footer__contact a:hover {
   color: #FF79DA;
-}
-
-.loader {
-  color: #9356DC;
-  font-family: "Shrikhand", cursive;
-  font-size: 50px;
 }
 
 .explore {
@@ -663,6 +776,7 @@ h3 {
   margin: 0px;
   display: flex;
   border: transparent;
+  padding: 0px;
   cursor: pointer;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail {
