@@ -1,37 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/ /*@keyframes heart_fill {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
-/*@keyframes heart_drain {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.75;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.25;
-    }
-    100% {
-        opacity: 0;
-    } 
-}*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/
 @keyframes heart_fill {
   0% {
     transform: scale(0);
@@ -71,6 +38,102 @@
     transform: rotate(0deg);
   }
 }
+@keyframes loader-spin-title {
+  0% {
+    transform: rotate(0deg);
+    font-size: 0px;
+    color: #9356DC;
+  }
+  70% {
+    transform: rotate(360deg);
+    color: #FF79DA;
+  }
+  75% {
+    color: #99E2D0;
+  }
+  80% {
+    font-size: 80px;
+    color: #99E2D0;
+  }
+  100% {
+    transform: rotate(360deg);
+    font-size: 60px;
+    color: #99E2D0;
+  }
+}
+@keyframes loader-background {
+  0% {
+    opacity: 1;
+    z-index: 9;
+  }
+  90% {
+    opacity: 0.65;
+  }
+  99% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9;
+  }
+}
+@keyframes meal-unroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*@keyframes loader-move {
+0% {
+    transform: translateY(0);
+}
+25% {
+    transform: translateY(0.5rem);
+}
+75% {
+    transform: translateY(-0.5rem);
+}
+100% {
+    transform: translateY(0);
+}
+}*/
+/*@keyframes heart_fill {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+/*@keyframes heart_drain {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    } 
+}*/
 /*@keyframes card-check {
     0% {
         transform: scaleX(0);
@@ -112,18 +175,16 @@
     } 
 }*/
 * {
-  box-sizing: border-box;
-}
-
-* {
   max-width: 1280px;
   margin: 0px auto;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-/*main {
-    min-width: 380px;
-}*/
+.container {
+  position: relative;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -134,6 +195,33 @@ h2 {
 
 h3 {
   font-size: 15px;
+}
+
+h5 {
+  font-family: "Shrikhand", cursive;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+}
+.loader__title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 350px;
+  font-size: 0px;
+  animation: loader-spin-title 3s 300ms ease-in;
+  z-index: 10;
+}
+.loader__background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #e8f9f5;
+  animation: loader-background 4s 0s ease-in forwards;
 }
 
 .header {
@@ -367,13 +455,13 @@ h3 {
   transform-origin: bottom;
 }
 
-.starter__card--btn:hover {
+.meal__card--btn:hover {
   background-color: #f2eafb;
 }
-.starter__card--btn:hover .card__check {
+.meal__card--btn:hover .card__check {
   animation: card-check 500ms 0s ease-in-out forwards;
 }
-.starter__card--btn:hover .check__icon {
+.meal__card--btn:hover .check__icon {
   animation: card-check-spin 400ms 100ms ease-in-out forwards;
 }
 
@@ -389,10 +477,6 @@ h3 {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  margin: 0px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .order {
@@ -620,23 +704,25 @@ h3 {
   position: absolute;
   right: 60px;
 }
-.restaurant__card .menu__starter {
+.restaurant__card .menu__meal {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.restaurant__card .menu__starter .starter__title {
+.restaurant__card .menu__meal .meal__title {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
   position: relative;
 }
-.restaurant__card .menu__starter .starter__title h3 {
+.restaurant__card .menu__meal .meal__title h3 {
   width: 100%;
   padding-left: 20px;
+  text-transform: uppercase;
 }
-.restaurant__card .menu__starter .starter__title .starter__underline {
+.restaurant__card .menu__meal .meal__title .meal__underline {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -644,46 +730,98 @@ h3 {
   height: 3px;
   background-color: #99E2D0;
 }
-.restaurant__card .menu__starter .starter__card {
+.restaurant__card .menu__meal .meal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.restaurant__card .menu__meal .meal__section .meal__card {
   width: 350px;
   height: 75px;
   display: flex;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px 2px #c1c1c1;
   overflow: hidden;
+  box-shadow: 0px 3px 5px 2px #c1c1c1;
+  opacity: 0;
 }
-.restaurant__card .menu__starter .starter__card--btn {
+.restaurant__card .menu__meal .meal__section .meal__card--btn {
   width: 100%;
   height: 100%;
   margin: 0px;
   display: flex;
   border: transparent;
+  padding: 0px;
   cursor: pointer;
 }
-.restaurant__card .menu__starter .starter__card--btn .starter__meal {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 15px;
   gap: 5px;
 }
-.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__title {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__title {
   width: 100%;
+  text-align: left;
   display: flex;
 }
-.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle {
   width: 100%;
   height: 30px;
   display: flex;
 }
-.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle .meal__side {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__side {
   width: 100%;
   text-align: left;
 }
-.restaurant__card .menu__starter .starter__card--btn .starter__meal .meal__subtitle .meal__price {
+.restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__price {
   width: 30px;
   text-align: right;
   font-weight: bold;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--1 {
+  animation: meal-unroll 1s 0s ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--2 {
+  animation: meal-unroll 1s 250ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--3 {
+  animation: meal-unroll 1s 300ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--4 {
+  animation: meal-unroll 1s 350ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--5 {
+  animation: meal-unroll 1s 400ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--6 {
+  animation: meal-unroll 1s 450ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--7 {
+  animation: meal-unroll 1s 500ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--8 {
+  animation: meal-unroll 1s 550ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--9 {
+  animation: meal-unroll 1s 600ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--10 {
+  animation: meal-unroll 1s 650ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--11 {
+  animation: meal-unroll 1s 700ms ease-in-out forwards;
+}
+.restaurant__card .menu__meal .meal__section .meal__unroll--12 {
+  animation: meal-unroll 1s 750ms ease-in-out forwards;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__card .menu__meal .meal__section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 
-.starter__card--btn:hover {
+.meal__card--btn:hover {
     background-color: lighten($color: $colour-primary, $amount: 35);
     .card__check {
         animation: card-check 500ms 0s ease-in-out forwards;
@@ -21,5 +21,4 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: $colour-tertiary;
-    @include ellipsis;
 }

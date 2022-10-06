@@ -1,38 +1,4 @@
-/*@keyframes heart_fill {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
 
-/*@keyframes heart_drain {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.75;
-    }
-    50% {
-        opacity: 0.50;
-    }
-    75% {
-        opacity: 0.25;
-    }
-    100% {
-        opacity: 0;
-    } 
-}*/
 @keyframes heart_fill {
     0% {
         transform: scale(0);
@@ -75,6 +41,108 @@
     }
 }
 
+@keyframes loader-spin-title {
+    0% {
+        transform: rotate(0deg);
+        font-size: 0px;
+        color: $colour-primary;
+    }
+    70% {
+        transform: rotate(360deg);
+        color: $colour-secondary;
+    }
+    75% {
+        color: $colour-tertiary;
+    }
+    80% {
+        font-size: 80px;
+        color: $colour-tertiary;        
+    }
+    100% {
+        transform: rotate(360deg);
+        font-size: 60px;
+        color: $colour-tertiary;
+    }
+}
+
+@keyframes loader-background {
+    0% {
+        opacity: 1;
+        z-index: 9;
+    }
+    90% {
+        opacity: 0.65;
+    }
+    99% {
+        opacity: 0;
+        z-index: 9;
+    }
+    100% {
+        opacity: 0;
+        z-index: -9;
+    }
+} 
+
+@keyframes meal-unroll {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*@keyframes loader-move {
+0% {
+    transform: translateY(0);
+}
+25% {
+    transform: translateY(0.5rem);
+}
+75% {
+    transform: translateY(-0.5rem);
+}
+100% {
+    transform: translateY(0);
+}
+}*/
+
+
+/*@keyframes heart_fill {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+
+/*@keyframes heart_drain {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    } 
+}*/
 
 /*@keyframes card-check {
     0% {
