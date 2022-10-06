@@ -9,11 +9,26 @@
         width: 180px;
         @include btn-order;
         @include shadow-light;
-        //cursor: pointer;
-        transition: background-image 1s;
+        position: relative;
+        z-index: 1;
         &:hover {
-            @include shadow-heavy;
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            @include btn-order;
+            @include shadow-light;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             background-image: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-secondary, 10) 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 300ms;
         }
     }
 }
