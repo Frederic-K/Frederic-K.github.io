@@ -59,10 +59,13 @@
   }
 }
 @keyframes loader-background {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  90% {
+    opacity: 0.65;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -237,7 +240,7 @@ h5 {
   bottom: 0;
   left: 0;*/
   font-size: 0px;
-  animation: loader-spin-title 5s 1s;
+  animation: loader-spin-title 4s 300ms ease-in;
   z-index: 10;
 }
 .loader__background {
@@ -245,7 +248,7 @@ h5 {
   height: 100%;
   position: fixed;
   background-color: #e8f9f5;
-  animation: loader-background 7s 0s both;
+  animation: loader-background 5s 0s ease-in both;
   z-index: 9;
 }
 

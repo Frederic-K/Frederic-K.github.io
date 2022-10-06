@@ -56,7 +56,7 @@
       bottom: 0;
       left: 0;*/
       font-size: 0px;
-      animation: loader-spin-title 5s 1s;
+      animation: loader-spin-title 4s 300ms ease-in;
       z-index: 10;
     }
     &__background {
@@ -64,7 +64,7 @@
       height: 100%;
       position: fixed;
       background-color: lighten($color: $colour-tertiary, $amount: 20);
-      animation: loader-background 7s 0s both;
+      animation: loader-background 5s 0s ease-in both;
       z-index: 9;
     }
 }
