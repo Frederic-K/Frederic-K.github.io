@@ -1,45 +1,4 @@
 
-/*.loader {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__ustensil {
-        color: $colour-primary;
-        font-family: 'Shrikhand', cursive;
-        font-size: 550px;
-        opacity: 0.8;
-        span {
-            display: inline-block;
-            animation: loader-pulse 0.5s alternate ease-in-out infinite;
-            &:nth-child(odd) {
-                animation-delay: 0.5s;
-            }
-        }
-
-    }
-}*/
-/*main {
-  opacity: 0.2;
-  animation: loader-homepage 5500ms 1s ease-in-out forwards;
-}*/
-/*.loader {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 10;
-  animation: loader-background 6s 0s ease-in-out;
-  &__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0px;
-    margin-top: 300px;
-    animation: loader-title 5s 100ms ease-in-out;
-  }
-}*/
-
 .loader {
   width: 100%;
   height: 100%;
@@ -65,7 +24,7 @@
       position: fixed;
       background-color: lighten($color: $colour-tertiary, $amount: 20);
       animation: loader-background 5s 0s ease-in both;
-      z-index: 9;
+      //z-index: 9;
     }
 }
 

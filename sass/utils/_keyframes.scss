@@ -65,12 +65,18 @@
 @keyframes loader-background {
     0% {
         opacity: 1;
+        z-index: 9;
     }
     90% {
         opacity: 0.65;
     }
+    99% {
+        opacity: 0;
+        z-index: 9;
+    }
     100% {
         opacity: 0;
+        z-index: -9;
     }
   } 
 
