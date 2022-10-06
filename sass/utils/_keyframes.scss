@@ -51,6 +51,9 @@
         transform: rotate(360deg);
         color: $colour-secondary;
     }
+    75% {
+        color: $colour-tertiary;
+    }
     80% {
         font-size: 80px;
         color: $colour-tertiary;        
@@ -78,7 +81,16 @@
         opacity: 0;
         z-index: -9;
     }
-  } 
+} 
+
+@keyframes meal-unroll {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /*@keyframes loader-move {
 0% {

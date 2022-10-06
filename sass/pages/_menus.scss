@@ -73,15 +73,15 @@
             flex-direction: column;
             gap: 20px;
             padding-bottom: 20px;
-            text-overflow: ellipsis;
             .meal__card {
                 width: 350px;
                 height: 75px;
                 display: flex;
                 border-radius: $border-rad;
-                @include shadow-heavy;
-                //background-color: white;
                 overflow: hidden;
+                @include shadow-heavy;
+                opacity: 0;
+                //animation: meal-unroll 2s 0s ease-in forwards;
                 &--btn {
                     width: 100%;
                     height: 100%;
@@ -120,6 +120,42 @@
                         }
                     }
                 }
+            }
+            .meal__unroll--1 {
+                animation: meal-unroll 1s 0s ease-in-out forwards;
+            }
+            .meal__unroll--2 {
+                animation: meal-unroll 1s 250ms ease-in-out forwards;
+            }
+            .meal__unroll--3 {
+                animation: meal-unroll 1s 300ms ease-in-out forwards;
+            }
+            .meal__unroll--4 {
+                animation: meal-unroll 1s 350ms ease-in-out forwards;
+            }
+            .meal__unroll--5 {
+                animation: meal-unroll 1s 400ms ease-in-out forwards;
+            }
+            .meal__unroll--6 {
+                animation: meal-unroll 1s 450ms ease-in-out forwards;
+            }
+            .meal__unroll--7 {
+                animation: meal-unroll 1s 500ms ease-in-out forwards;
+            }
+            .meal__unroll--8 {
+                animation: meal-unroll 1s 550ms ease-in-out forwards;
+            }
+            .meal__unroll--9 {
+                animation: meal-unroll 1s 600ms ease-in-out forwards;
+            }
+            .meal__unroll--10 {
+                animation: meal-unroll 1s 650ms ease-in-out forwards;
+            }
+            .meal__unroll--11 {
+                animation: meal-unroll 1s 700ms ease-in-out forwards;
+            }
+            .meal__unroll--12 {
+                animation: meal-unroll 1s 750ms ease-in-out forwards;
             }
         @media screen and (min-width: 768px) {
                 @include desktop;

@@ -4,18 +4,13 @@
   height: 100%;
     &__title {
       width: 100%;
-      //height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: fixed;
       margin-top: 350px;
-      /*top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;*/
       font-size: 0px;
-      animation: loader-spin-title 4s 300ms ease-in;
+      animation: loader-spin-title 3s 300ms ease-in;
       z-index: 10;
     }
     &__background {
@@ -23,8 +18,9 @@
       height: 100%;
       position: fixed;
       background-color: lighten($color: $colour-tertiary, $amount: 20);
-      animation: loader-background 5s 0s ease-in both;
-      //z-index: 9;
+      animation: loader-background 4s 0s ease-in forwards;
     }
 }
+
+
 
