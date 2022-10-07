@@ -8,9 +8,9 @@
       justify-content: center;
       align-items: center;
       position: fixed;
-      margin-top: 350px;
+      margin-top: 340px;
       font-size: 0px;
-      animation: loader-spin-title 3s 300ms ease-in;
+      animation: loader-spin-title 2500ms 300ms ease-in;
       z-index: 10;
     }
     &__background {
@@ -18,7 +18,7 @@
       height: 100%;
       position: fixed;
       background-color: lighten($color: $colour-tertiary, $amount: 20);
-      animation: loader-background 4s 0s ease-in forwards;
+      animation: loader-background 3000ms 0s ease-in forwards;
     }
 }
 
