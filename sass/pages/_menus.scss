@@ -38,9 +38,16 @@
         position: relative;
         //margin: 0px;
         padding-left: 20px;
-        .card__btn {
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 2em;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+        .card__btn--like {
             position: absolute;
-            right: 60px;
+            top: 3px;
+            right: 40px;
         }
     }
     .menu__meal {

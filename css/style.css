@@ -433,6 +433,8 @@ h5 {
 }
 .card__btn--like .btn__icon {
   position: relative;
+  padding: 0px;
+  border: 0px;
 }
 .card__btn--like .btn__icon .empty-heart {
   position: absolute;
@@ -700,9 +702,16 @@ h5 {
   position: relative;
   padding-left: 20px;
 }
-.restaurant__card .restaurant__name .card__btn {
+.restaurant__card .restaurant__name h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.restaurant__card .restaurant__name .card__btn--like {
   position: absolute;
-  right: 60px;
+  top: 3px;
+  right: 40px;
 }
 .restaurant__card .menu__meal {
   width: 100%;
