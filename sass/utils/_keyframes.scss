@@ -70,8 +70,8 @@
         opacity: 1;
         z-index: 9;
     }
-    90% {
-        opacity: 0.65;
+    95% {
+        opacity: 0;
     }
     99% {
         opacity: 0;
@@ -91,6 +91,23 @@
         opacity: 1;
     }
 }
+
+@keyframes loader-ring {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+      z-index: 9;
+    }
+    99% {
+        opacity: 0;
+        z-index: 9;
+    }
+    100% {
+      transform: rotate(1440deg);
+      opacity: 0;
+      z-index: -9;
+    }
+  }
 
 /*@keyframes loader-move {
 0% {

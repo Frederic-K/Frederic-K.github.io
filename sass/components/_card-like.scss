@@ -15,7 +15,7 @@
             .empty-heart {
                 position: absolute;
                 opacity: 1;
-                //transition: opacity 1500ms;
+                transition: opacity 1500ms;
             }
             .full-heart {
                 position: absolute;
@@ -29,9 +29,9 @@
                 transition: all 500ms;
             }    
             &:hover {
-                /*.empty-heart {                    
+                .empty-heart {                    
                     opacity: 0;
-                }*/
+                }
                 .full-heart {
                     opacity: 1;
                     transform: scale(1);
