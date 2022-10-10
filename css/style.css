@@ -439,7 +439,6 @@ h5 {
 .card__btn--like .btn__icon .empty-heart {
   position: absolute;
   opacity: 1;
-  transition: opacity 1s;
 }
 .card__btn--like .btn__icon .full-heart {
   position: absolute;
@@ -450,8 +449,10 @@ h5 {
   transform: scale(0);
   transition: all 500ms;
 }
-.card__btn--like .btn__icon:hover .empty-heart {
-  opacity: 0;
+.card__btn--like .btn__icon:hover {
+  /*.empty-heart {                    
+      opacity: 0;
+  }*/
 }
 .card__btn--like .btn__icon:hover .full-heart {
   opacity: 1;
@@ -769,12 +770,12 @@ h5 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  gap: 5px;
+  padding: 10px;
   overflow: hidden;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__title {
   width: 100%;
+  height: 45px;
   text-align: left;
   margin: 0px;
   white-space: nowrap;
@@ -783,7 +784,6 @@ h5 {
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle {
   width: 100%;
-  height: 30px;
   display: flex;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__side {

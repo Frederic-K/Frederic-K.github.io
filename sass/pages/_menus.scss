@@ -96,26 +96,20 @@
                     border: transparent;
                     padding: 0px;
                     cursor: pointer;
-                    //@include ellipsis;
                     .meal__detail {
                         width: 100%;
-                        //height: 72px;
                         display: flex;
                         flex-direction: column;
-                        padding: 15px;
-                        gap: 5px;
-                        overflow: hidden;
-                        //@include ellipsis;
+                        padding: 10px;
                         .meal__title {
                             width: 100%;
+                            height: 45px;
                             text-align: left;
                             @include ellipsis;
                         }
                         .meal__subtitle {
                             width: 100%;
-                            height: 30px;
                             display: flex;
-                            //@include ellipsis;
                             .meal__side {
                                 width: 100%;
                                 text-align: left;
