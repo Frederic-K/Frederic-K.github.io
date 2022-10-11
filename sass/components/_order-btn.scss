@@ -11,11 +11,6 @@
         @include shadow-light;
         position: relative;
         z-index: 1;
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
         &::after {
             @include btn-order;
             @include shadow-light;
@@ -29,6 +24,11 @@
             opacity: 0;
             z-index: -1;
             transition: opacity 300ms;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }

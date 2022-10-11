@@ -73,3 +73,14 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+@mixin meal-unroll {
+    @for $meal-nb from 1 to 12 {
+        .meal__unroll--#{$meal-nb} {
+            animation: meal-unroll;
+            animation-duration: 10s;
+            animation-delay: 1000+($meal-nb*100)ms;
+            animation-fill-mode: forwards;
+        }
+    }       
+}
