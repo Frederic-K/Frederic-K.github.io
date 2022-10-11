@@ -1,28 +1,4 @@
 
-@keyframes heart_fill {
-    0% {
-        transform: scale(0);
-        transform-origin: 50% 100%;
-    }
-    25% {
-        transform: scale(0.25);
-    }
-    50% {
-        transform: scale(0.5);
-        /*opacity: 1;*/
-    }
-    75% {
-        transform: scale(0.75);
-    }
-    /*85% {
-        opacity: 1;
-    }*/
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 @keyframes card-check {
     from {
         width: 0px;
@@ -38,30 +14,6 @@
     }
     to {
         transform: rotate(0deg);
-    }
-}
-
-@keyframes loader-spin-title {
-    0% {
-        transform: rotate(0deg);
-        font-size: 0px;
-        color: $colour-primary;
-    }
-    70% {
-        transform: rotate(360deg);
-        color: $colour-secondary;
-    }
-    75% {
-        color: $colour-tertiary;
-    }
-    80% {
-        font-size: 80px;
-        color: $colour-tertiary;        
-    }
-    100% {
-        transform: rotate(360deg);
-        font-size: 60px;
-        color: $colour-tertiary;
     }
 }
 
@@ -83,15 +35,6 @@
     }
 } 
 
-@keyframes meal-unroll {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes loader-ring {
     0% {
       transform: rotate(0deg);
@@ -108,6 +51,39 @@
       z-index: -9;
     }
   }
+
+@keyframes meal-unroll {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*@keyframes loader-spin-title {
+    0% {
+        transform: rotate(0deg);
+        font-size: 0px;
+        color: $colour-primary;
+    }
+    70% {
+        transform: rotate(360deg);
+        color: $colour-secondary;
+    }
+    75% {
+        color: $colour-tertiary;
+    }
+    80% {
+        font-size: 80px;
+        color: $colour-tertiary;        
+    }
+    100% {
+        transform: rotate(360deg);
+        font-size: 60px;
+        color: $colour-tertiary;
+    }
+}*/
 
 /*@keyframes loader-move {
 0% {

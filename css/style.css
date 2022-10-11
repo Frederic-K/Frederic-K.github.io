@@ -1,27 +1,4 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap');*/
-@keyframes heart_fill {
-  0% {
-    transform: scale(0);
-    transform-origin: 50% 100%;
-  }
-  25% {
-    transform: scale(0.25);
-  }
-  50% {
-    transform: scale(0.5);
-    /*opacity: 1;*/
-  }
-  75% {
-    transform: scale(0.75);
-  }
-  /*85% {
-      opacity: 1;
-  }*/
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 @keyframes card-check {
   from {
     width: 0px;
@@ -36,29 +13,6 @@
   }
   to {
     transform: rotate(0deg);
-  }
-}
-@keyframes loader-spin-title {
-  0% {
-    transform: rotate(0deg);
-    font-size: 0px;
-    color: #9356DC;
-  }
-  70% {
-    transform: rotate(360deg);
-    color: #FF79DA;
-  }
-  75% {
-    color: #99E2D0;
-  }
-  80% {
-    font-size: 80px;
-    color: #99E2D0;
-  }
-  100% {
-    transform: rotate(360deg);
-    font-size: 60px;
-    color: #99E2D0;
   }
 }
 @keyframes loader-background {
@@ -78,14 +32,6 @@
     z-index: -9;
   }
 }
-@keyframes meal-unroll {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes loader-ring {
   0% {
     transform: rotate(0deg);
@@ -102,6 +48,37 @@
     z-index: -9;
   }
 }
+@keyframes meal-unroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*@keyframes loader-spin-title {
+    0% {
+        transform: rotate(0deg);
+        font-size: 0px;
+        color: $colour-primary;
+    }
+    70% {
+        transform: rotate(360deg);
+        color: $colour-secondary;
+    }
+    75% {
+        color: $colour-tertiary;
+    }
+    80% {
+        font-size: 80px;
+        color: $colour-tertiary;        
+    }
+    100% {
+        transform: rotate(360deg);
+        font-size: 60px;
+        color: $colour-tertiary;
+    }
+}*/
 /*@keyframes loader-move {
 0% {
     transform: translateY(0);
@@ -785,6 +762,42 @@ h5 {
   flex-direction: column;
   gap: 20px;
   padding-bottom: 20px;
+  /*.meal__unroll--1 {
+      animation: meal-unroll 1s 0s ease-in-out forwards;
+  }
+  .meal__unroll--2 {
+      animation: meal-unroll 1s 250ms ease-in-out forwards;
+  }
+  .meal__unroll--3 {
+      animation: meal-unroll 1s 300ms ease-in-out forwards;
+  }
+  .meal__unroll--4 {
+      animation: meal-unroll 1s 350ms ease-in-out forwards;
+  }
+  .meal__unroll--5 {
+      animation: meal-unroll 1s 400ms ease-in-out forwards;
+  }
+  .meal__unroll--6 {
+      animation: meal-unroll 1s 450ms ease-in-out forwards;
+  }
+  .meal__unroll--7 {
+      animation: meal-unroll 1s 500ms ease-in-out forwards;
+  }
+  .meal__unroll--8 {
+      animation: meal-unroll 1s 550ms ease-in-out forwards;
+  }
+  .meal__unroll--9 {
+      animation: meal-unroll 1s 600ms ease-in-out forwards;
+  }
+  .meal__unroll--10 {
+      animation: meal-unroll 1s 650ms ease-in-out forwards;
+  }
+  .meal__unroll--11 {
+      animation: meal-unroll 1s 700ms ease-in-out forwards;
+  }
+  .meal__unroll--12 {
+      animation: meal-unroll 1s 750ms ease-in-out forwards;
+  }*/
 }
 .restaurant__card .menu__meal .meal__section .meal__card {
   width: 350px;
@@ -837,40 +850,70 @@ h5 {
   font-weight: bold;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--1 {
-  animation: meal-unroll 1s 0s ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1100 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--2 {
-  animation: meal-unroll 1s 250ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1200 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--3 {
-  animation: meal-unroll 1s 300ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1300 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--4 {
-  animation: meal-unroll 1s 350ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1400 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--5 {
-  animation: meal-unroll 1s 400ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1500 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--6 {
-  animation: meal-unroll 1s 450ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1600 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--7 {
-  animation: meal-unroll 1s 500ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1700 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--8 {
-  animation: meal-unroll 1s 550ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1800 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--9 {
-  animation: meal-unroll 1s 600ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 1900 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--10 {
-  animation: meal-unroll 1s 650ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 2000 ms;
+  animation-fill-mode: forwards;
 }
 .restaurant__card .menu__meal .meal__section .meal__unroll--11 {
-  animation: meal-unroll 1s 700ms ease-in-out forwards;
-}
-.restaurant__card .menu__meal .meal__section .meal__unroll--12 {
-  animation: meal-unroll 1s 750ms ease-in-out forwards;
+  animation: meal-unroll;
+  animation-duration: 10s;
+  animation-delay: 2100 ms;
+  animation-fill-mode: forwards;
 }
 @media screen and (min-width: 768px) {
   .restaurant__card .menu__meal .meal__section {
