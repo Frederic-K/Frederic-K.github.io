@@ -21,9 +21,7 @@
                 position: absolute;
                 color: transparent;
                 background-clip: text;
-                //-webkit-background-clip: text;
                 background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
-                //color: $colour-primary;
                 opacity: 0;
                 transform: scale(0);
                 transition: all 500ms;
@@ -35,7 +33,6 @@
                 .full-heart {
                     opacity: 1;
                     transform: scale(1);
-                    //transform: scale(1.2);
                     transform-origin: bottom;
                 }
             }
