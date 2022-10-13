@@ -1,11 +1,12 @@
 * {
-    box-sizing: border-box;
-}
-
-* {
     max-width: 1280px;
     margin: 0px auto;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
 }
 
 h1 {
@@ -20,3 +21,6 @@ h3 {
     font-size: 15px;
 }
 
+h5 {
+    font-family: 'Shrikhand', cursive;  
+}

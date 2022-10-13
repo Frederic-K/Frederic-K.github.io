@@ -1,22 +1,19 @@
-.explore {
+.order {
+    width: 200px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;  
-      &__btn {
-        width: 210px;
-        @include btn-explore;
+    align-items: center;
+    padding-top: 50px;
+    color: white;
+    &__btn {
+        width: 180px;
+        @include btn-order;
         @include shadow-light;
         position: relative;
         z-index: 1;
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
         &::after {
-            @include btn-explore;
-            @include shadow-heavy;
+            @include btn-order;
+            @include shadow-light;
             content: "";
             position: absolute;
             top: 0;
@@ -27,6 +24,11 @@
             opacity: 0;
             z-index: -1;
             transition: opacity 300ms;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }

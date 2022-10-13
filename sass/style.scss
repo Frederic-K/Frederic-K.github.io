@@ -5,9 +5,9 @@
 
 @import "./base/base";
 
-@import "./layout/header", "./layout/footer";
+@import "./layout/loader", "./layout/header", "./layout/footer";
 
-@import "./components/discover-btn", "./components/filter-btn", "./components/card-sticker", "./components/card-btn";
+@import "./components/discover-btn", "./components/filter-btn", "./components/card-sticker", "./components/card-like", "./components/card-check", "./components/order-btn";
 
 @import "./pages/home", "./pages/menus";
 

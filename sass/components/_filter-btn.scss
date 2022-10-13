@@ -18,13 +18,15 @@
             transition: opacity 300ms;
             z-index: -1;
         }
+        .filter__btn--icon {
+            transition: color 300ms;
+        }
         &:hover {
-            .filter__btn--icon {
-                color: $colour-primary;
-                transition: color 300ms;
-            }
             &::after {
                 opacity: 1;
+            }
+            .filter__btn--icon {
+                color: $colour-primary;
             }
         }
         &--number {

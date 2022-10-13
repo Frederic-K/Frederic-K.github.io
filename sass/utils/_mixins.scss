@@ -12,7 +12,19 @@
     border-radius: $border-rad;
     border: 0px;
     color: white;
-    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    @include shadow-light;
+    //box-shadow: 0px 3px 5px 2px #D7D7D9;
+    cursor: pointer;
+}
+
+@mixin btn-order {
+    height: 40px;
+    border-radius: $border-rad;
+    border: 0px;
+    color: white;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    //background-color: #9356DC;
     @include shadow-light;
     //box-shadow: 0px 3px 5px 2px #D7D7D9;
     cursor: pointer;
@@ -49,4 +61,26 @@
     font-weight: bold;
 }
 
+@mixin ellipsis {
+        margin: 0px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;    
+}
 
+@mixin desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@mixin meal-unroll {
+    @for $meal-nb from 1 to 12 {
+        .meal__unroll--#{$meal-nb} {
+            animation: meal-unroll;
+            animation-duration: 10s;
+            animation-delay: 1000+($meal-nb*100)ms;
+            animation-fill-mode: forwards;
+        }
+    }       
+}

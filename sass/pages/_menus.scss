@@ -10,3 +10,132 @@
     }
 }
 
+.restaurant__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .restaurant__img {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+    .restaurant__menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin-top: -50px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #eeeeee;
+    }
+    .restaurant__name {
+        width: 100%;
+        position: relative;
+        padding-left: 20px;
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 2em;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+        .card__btn--like {
+            position: absolute;
+            top: 3px;
+            right: 40px;
+        }
+    }
+    .menu__meal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .meal__type {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            position: relative;
+            h3 {
+                width: 100%;
+                padding-left: 20px;
+                text-transform: uppercase;
+            }
+            .meal__underline {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 40px;
+                height: 3px;
+                background-color: $colour-tertiary;
+            }
+        }      
+        .meal__section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 20px;
+            .meal__card {
+                width: 350px;
+                height: 75px;
+                display: flex;
+                border-radius: $border-rad;
+                overflow: hidden;
+                @include shadow-heavy;
+                opacity: 0;
+                &--btn {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0px;
+                    display: flex;
+                    border: transparent;
+                    padding: 0px;
+                    cursor: pointer;
+                    .meal__detail {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        overflow: hidden;
+                        .meal__title {
+                            width: 100%;
+                            height: 45px;
+                            text-align: left;
+                            @include ellipsis;
+                        }
+                        .meal__subtitle {
+                            width: 100%;
+                            display: flex;
+                            gap: 5px;
+                            .meal__side {
+                                width: 100%;
+                                text-align: left;
+                                @include ellipsis;
+                            }
+                            .meal__price {
+                                width: 30px;
+                                text-align: right;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }         
+        @media screen and (min-width: 768px) {
+                @include desktop;
+            }     
+        }    
+    }      
+}
+@for $meal-nb from 1 to 12 {
+    .meal__unroll--#{$meal-nb} {
+        animation: meal-unroll;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: ($meal-nb*100)+0ms;
+    }                
+}

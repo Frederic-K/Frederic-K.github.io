@@ -1,0 +1,44 @@
+.card {
+    &__btn--like {
+        position: absolute;
+        right: 40px;
+        bottom: 55px;
+        border: 0px;
+        padding: 0px;
+        font-size: 25px;
+        border: 0px solid transparent;
+        cursor: pointer;
+        .btn__icon {
+            position: relative;
+            padding: 0px;
+            border: 0px;
+            .empty-heart {
+                position: absolute;
+                opacity: 1;
+                transition: opacity 1500ms;
+            }
+            .full-heart {
+                position: absolute;
+                color: transparent;
+                background-clip: text;
+                //-webkit-background-clip: text;
+                background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
+                //color: $colour-primary;
+                opacity: 0;
+                transform: scale(0);
+                transition: all 500ms;
+            }    
+            &:hover {
+                .empty-heart {                    
+                    opacity: 0;
+                }
+                .full-heart {
+                    opacity: 1;
+                    transform: scale(1);
+                    //transform: scale(1.2);
+                    transform-origin: bottom;
+                }
+            }
+        }
+    }    
+}
