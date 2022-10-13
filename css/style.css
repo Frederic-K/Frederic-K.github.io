@@ -803,6 +803,7 @@ h5 {
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle {
   width: 100%;
   display: flex;
+  gap: 5px;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail .meal__subtitle .meal__side {
   width: 100%;

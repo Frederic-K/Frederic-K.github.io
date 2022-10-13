@@ -36,7 +36,6 @@
     .restaurant__name {
         width: 100%;
         position: relative;
-        //margin: 0px;
         padding-left: 20px;
         h2 {
             font-family: 'Shrikhand', cursive;
@@ -111,6 +110,7 @@
                         .meal__subtitle {
                             width: 100%;
                             display: flex;
+                            gap: 5px;
                             .meal__side {
                                 width: 100%;
                                 text-align: left;
@@ -124,46 +124,18 @@
                         }
                     }
                 }
-            }
-            .meal__unroll--1 {
-                animation: meal-unroll 1s 0s ease-in-out forwards;
-            }
-            .meal__unroll--2 {
-                animation: meal-unroll 1s 250ms ease-in-out forwards;
-            }
-            .meal__unroll--3 {
-                animation: meal-unroll 1s 300ms ease-in-out forwards;
-            }
-            .meal__unroll--4 {
-                animation: meal-unroll 1s 350ms ease-in-out forwards;
-            }
-            .meal__unroll--5 {
-                animation: meal-unroll 1s 400ms ease-in-out forwards;
-            }
-            .meal__unroll--6 {
-                animation: meal-unroll 1s 450ms ease-in-out forwards;
-            }
-            .meal__unroll--7 {
-                animation: meal-unroll 1s 500ms ease-in-out forwards;
-            }
-            .meal__unroll--8 {
-                animation: meal-unroll 1s 550ms ease-in-out forwards;
-            }
-            .meal__unroll--9 {
-                animation: meal-unroll 1s 600ms ease-in-out forwards;
-            }
-            .meal__unroll--10 {
-                animation: meal-unroll 1s 650ms ease-in-out forwards;
-            }
-            .meal__unroll--11 {
-                animation: meal-unroll 1s 700ms ease-in-out forwards;
-            }
-            .meal__unroll--12 {
-                animation: meal-unroll 1s 750ms ease-in-out forwards;
             }         
         @media screen and (min-width: 768px) {
                 @include desktop;
             }     
         }    
     }      
+}
+@for $meal-nb from 1 to 12 {
+    .meal__unroll--#{$meal-nb} {
+        animation: meal-unroll;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: ($meal-nb*100)+0ms;
+    }                
 }
