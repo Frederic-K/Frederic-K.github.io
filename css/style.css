@@ -56,13 +56,6 @@
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> main
->>>>>>> main
 * {
   max-width: 1280px;
   margin: 0px auto;
@@ -87,7 +80,7 @@ h3 {
 }
 
 h5 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 .loader {
@@ -121,13 +114,6 @@ h5 {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  padding-bottom: 20px;
->>>>>>> main
->>>>>>> main
 }
 
 .header__logo {
@@ -171,6 +157,7 @@ h5 {
 }
 .footer__partnership i {
   margin: 0px;
+  font-size: small;
 }
 .footer__partnership h5 {
   margin: 0px;
@@ -308,6 +295,7 @@ h5 {
   top: 15px;
   right: 10px;
   font-size: 15px;
+  border-radius: 2px;
   font-weight: bold;
   color: #4acbab;
   background-color: #c1ede2;
@@ -505,13 +493,6 @@ h5 {
     align-items: center;
   }
 }
-@media screen and (min-width: 768px) {
-  .restaurant {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-}
 
 .card {
   width: 340px;
@@ -669,6 +650,7 @@ h5 {
   border: transparent;
   padding: 0px;
   cursor: pointer;
+  background-color: white;
 }
 .restaurant__card .menu__meal .meal__section .meal__card--btn .meal__detail {
   width: 100%;
