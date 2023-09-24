@@ -1,4 +1,4 @@
-Openclasrooms Projet 3 : 
+Openclassrooms Projet 3 : 
 Dynamisez une page web avec des animations CSS : Site ohmyfood
 
 ![banner](./img/ohmyfoodbanner.png)
